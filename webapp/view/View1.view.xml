@@ -1,0 +1,13 @@
+<mvc:View controllerName="ovly.app.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>view1_title}">
+        <content>
+            <List items="{/data}">
+                <items>
+                    <StandardListItem title="{full_name}" description="{city}" info="{conference}" />
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

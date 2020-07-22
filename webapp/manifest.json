@@ -1,0 +1,66 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "ovly.app",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}"
+	},
+
+	"sap.ui": {
+		"technology": "UI5"
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "ovly.app.view.Root",
+			"id": "Root",
+			"type": "XML",
+			"async": true
+		},
+		"dependencies": {
+			"minUI5Version": "1.44.20",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ovly.app.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "ovly.app.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": true
+			},
+			"routes": [{
+				"name": "Default",
+				"pattern": "",
+				"target": ["View1"]
+			}],
+			"targets": {
+				"View1": {
+					"viewId": "View1",
+					"viewName": "View1"
+				}
+			}
+		}
+	}
+}
